@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -429,7 +429,7 @@ CNAME: www.website.com      CNAME   website.com.
             // index - The index of the terminal cursor within {text}
             public string[] GetSuggestions(string text, int index)
             {
-                return _domainsList.Where(x => x.StartsWith(text)).ToArray();
+                return _domainsList.Where(x => x.StartsWith(text, StringComparison.InvariantCultureIgnoreCase)).ToArray();
             }
         }
 
